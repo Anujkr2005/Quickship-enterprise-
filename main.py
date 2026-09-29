@@ -2,7 +2,7 @@ from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from sqlalchemy import or_, func
-from .database import Base, engine, get_db
+from database import Base, engine, get_db
 from .models import Lead, ScoreConfig, Campaign
 from .schemas import LeadCreate, LeadOut, LeadUpdate, ScoreConfigIn, CampaignIn, CampaignOut
 from .ai import qualify_lead
