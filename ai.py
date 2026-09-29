@@ -1,4 +1,4 @@
-from .scoring import calculate_score, classify
+from scoring import calculate_score, classify
 
 def qualify_lead(lead, config=None):
     score, checks = calculate_score(lead, config)
