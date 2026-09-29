@@ -3,9 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from sqlalchemy import or_, func
 from database import Base, engine, get_db
-from .models import Lead, ScoreConfig, Campaign
-from .schemas import LeadCreate, LeadOut, LeadUpdate, ScoreConfigIn, CampaignIn, CampaignOut
-from .ai import qualify_lead
+from models import Lead, ScoreConfig, Campaign
+from schemas import LeadCreate, LeadOut, LeadUpdate, ScoreConfigIn, CampaignIn, CampaignOut
+from ai import qualify_lead
 
 Base.metadata.create_all(bind=engine)
 app=FastAPI(title='Quickship AI Lead Generation & Sales CRM',version='2.0.0',description='MVP/production-ready foundation for compliant lead discovery, qualification, scoring and CRM operations.')
